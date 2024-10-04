@@ -1,0 +1,359 @@
+:root {
+  font-family: 'Arial'; /* Arial是首选字体，如果不可用，则使用任何无衬线字体 */
+  font-size: 16px; /* 设置全局字体大小 */
+  line-height: 1.5; /* 设置全局行高 */
+}
+
+/* 轮播图部分 */
+* {box-sizing: border-box}
+body {
+    font-family: Verdana, sans-serif;
+}
+
+/* 桌面电脑的样式 */
+@media screen and (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+}
+
+/* 平板电脑的样式 */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 85%;
+  }
+}
+
+/* 智能手机的样式 */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.sideItem {
+  position: absolute;
+  width: 100%; /* 确保图片宽度与容器相同 */
+  height: 100%; /* 确保图片高度与容器相同 */
+    top: 0;
+    left: 0;
+    right: 0; /* 添加right: 0确保元素可以扩展到视口的右侧 */
+    opacity: 0; /* 初始时不显示 */
+    transition: opacity 1.5s; /* 添加透明度变化过渡 */
+    display: flex; /* 使用flexbox使图片居中 */
+    justify-content: center; /* 水平居中图片 */
+    margin-top:3vh ;
+}
+
+.sideItem img {
+  max-width: 100%; /* 确保图片可以扩展到容器宽度 */
+  max-height: 100%;
+  object-fit: cover; /* 图片覆盖整个容器，可能会剪裁 */
+}
+
+.slideActive {
+    z-index: 1; /* 确保激活的幻灯片在顶部 */
+    opacity: 1; /* 显示激活的幻灯片 */
+}
+
+  /* 幻灯片容器 */
+  .slideshow{
+    background-color: #FFFFFF;
+    max-width: 40%; /* 使轮播图宽度适应容器宽度 */
+    position: relative;
+    margin: 5px; /* 增加上下边距，使其与导航和介绍部分分离 */
+    margin: auto; /* 水平居中 */ 
+    overflow: hidden; /* 防止图片溢出容器 */
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    aspect-ratio: 4/3; /* 设置固定的宽高比 */
+  }
+
+  /* 下一张 & 上一张 按钮 */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;/* 初始垂直居中 */
+    transform: translateY(-50%);
+    font-size: 4vw;
+    color: rgb(255, 255, 255,0.5);
+    background-color: rgba(50, 48, 48, 0.016);
+    padding: 1.3vw 0.8vw 1.3vw 0.8vw;
+    border: none;
+    z-index: 1000;
+    transition: background-color 0.3s, width 0.5s, height 0.5s; /* 添加宽度和高度的过渡效果 */
+  }
+ /*导航圆点隐藏*/
+ .dot{
+  color: rgba(112,112,112,0);
+}
+  /* 定位 "下一张" 按钮靠右 */
+  .prev {
+      left: 0px; /* 调整左边距，确保按钮在容器内 */
+  }
+
+  .next {
+      right: 0px; /* 调整右边距，确保按钮在容器内 */
+  }
+
+  /* 上一张和下一张的鼠标移上效果 */
+  .prev:hover,.next:hover {
+    color: rgb(112,112,112); /* 设置字体颜色 */
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* 淡出动画 */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+ 
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+ 
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* 轮播图部分结束 */
+
+/* 介绍部分样式 */
+
+  #hello {
+    position: relative;
+    z-index: 1; /* 确保介绍在轮播图之下 */
+    margin-top: 5vh;
+    margin-bottom: 28vh;
+  }
+
+  #hello h1{
+    font-size: clamp(30px, 3vw, 120px);
+    color: #3C2104;
+    text-align: center; /* 文字居中 */
+    margin-bottom: 5vh;
+   
+  }
+
+  #hello p {
+    font-size: clamp(12px, 3vh, 40px);
+    color: #3C2104;
+    padding-left: 15%; /* 使用百分比代替固定像素 */
+    padding-right: 15%; /* 使用百分比代替固定像素 */
+  }
+/* 介绍部分结束*/
+
+/* 服务部分样式 */
+#services {
+  width: 100%; /* 表格宽度 */
+  height: 30vw;
+  border-collapse: collapse; /* 边框合并 */
+  text-align: center; /* 文字居中 */
+  background-color: #3C2104;
+}
+
+
+#services td {
+  width: 50%; /* 每个单元格宽度 */
+  overflow: hidden; /* 隐藏超出单元格的内容 */
+}
+
+.service-border{
+  color: #3C2104;
+  background-color: #A98274;
+}
+
+.service-border h1{
+  font-size: clamp(30px, 3vw, 120px);
+  padding: 6vw;
+}
+
+.service-item{
+  padding-inline:4vw;
+  color: #FFFFFF;
+  background-color: #3C2104;
+}
+
+a {
+  color: #FFFFFF; 
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #A98274; /* 鼠标悬停时色 */
+  text-decoration: underline;
+}
+
+.service-item h3{
+  font-size: clamp(20px, 3vw, 60px);
+}
+
+.service-item p{
+  font-size: clamp(12px, 2vw, 30px);
+}
+
+.service-img img {
+  width: 100%; /* 图片宽度占满单元格 */
+  height: auto; /* 图片高度自适应 */
+  display: block; /* 将图片设置为块级元素，消除底部缝隙 */
+  object-fit: cover; /* 图片填充单元格 */
+}
+
+.service-border button {
+  display: block;
+  background-color: #3C2104;
+  color: #FFFFFF;
+  margin: 60px auto;
+  width: 400px;
+  padding: 30px;
+  font-size: clamp(12px, 3vh, 40px);
+  cursor: pointer;
+}
+.service-border button:hover {
+  color: #A98274; /* 鼠标悬停时保持红色 */
+  text-decoration: none;
+}
+/* 服务部分结束 */
+
+/* 联系&地址部分开始*/
+
+#connectheader {
+  display: flex; /* 使用flex布局来对齐图片和文本 */
+  align-items: center; /* 垂直居中对齐 */
+  margin-top: 100px;
+}
+
+#connectheader img.ui4 {
+  width: 50px; /* 根据需要调整图片大小 */
+  height: auto;
+  margin-right: 15px; /* 在图片和文本之间添加间距 */
+}
+
+#connectheader h2 {
+  line-height: 1.5; /* 调整行间距 */
+  font-size: clamp(30px, 3vw, 120px);
+  color: #3C2104; /* 设置默认文本颜色为绿色 */
+}
+
+#connectheader h2 .your-pet {
+  color: #A98274; /* 设置"Your Pet"为红色 */
+}
+
+#connectheader h2 .closer {
+  color: #B97047; /* 设置"Closer"为蓝色 */
+}
+
+#contact {
+  display: flex;
+  flex-direction: row; /* 行布局 */
+  align-items: stretch; /* 子元素拉伸以填满容器高度 */
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; /* 允许子元素在必要时换行 */
+}
+
+#map, .info {
+  width: 50%; /* 确保左右两边宽度相等 */
+}
+
+#map img {
+  width: 100%;
+  height: auto;
+
+}
+
+.info {
+  display: flex;
+  flex-direction: column; /* 垂直排列内容 */
+  align-items: flex-start; /* 从左侧开始对齐内容 */
+  justify-content: space-between; /* 均匀分配空间 */
+  padding:  0; /* 垂直方向的填充，保持与map的padding一致 */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: auto; /* 根据需要自动调整间距 */
+  width: 100%; /* 使每个info-item宽度填满整个info容器 */
+}
+
+.info-icon {
+  width: 50px; /* 图标大小 */
+  height: 50px; /* 图标大小 */
+  margin-right: 15px; /* 图标与文本之间的间距 */
+}
+
+.info h3 {
+  margin: 0;
+  color: #3C2104; /* 标题颜色设置为红色 */
+  font-size: clamp(30px, 3vw, 120px);
+}
+
+.info p {
+  margin: 0;
+  color: #A98274; /* 内容颜色设置为蓝色 */
+  font-size: clamp(10px, 3vh, 40px);
+}
+
+/* 响应式设计：当屏幕宽度小于某个值时，地图和文字垂直排列 */
+@media screen and (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* 改为垂直排列 */
+  }
+
+  #map, .info {
+    width: 100%; /* 使地图和文字宽度填满容器 */
+  }
+
+  .info {
+    padding: 15px; /* 添加一些内边距，以便内容不会紧贴边缘 */
+  }
+
+  .info-item {
+    margin-bottom: 15px; /* 添加底部间距，以便项目之间有间隔 */
+  }
+}
+
+/*联系&地址部分结束*/
+
+/*关于我们部分开始*/
+#about {
+  background-color: #A98274; /* 设置红色背景 */
+  border: 3px solid #3C2104; /* 设置绿色边框 */
+  padding: 40px; /* 内边距，可根据需要调整 */
+  margin: 20px; /* 外边距，可根据需要调整 */
+  text-align: center;
+  font-size: clamp(12px, 3vh, 40px);
+  color: #000000;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+#about .button {
+  display: inline-block; /* 使按钮成为行内块元素 */
+  background-color: #3C2104; /* 按钮背景色 */
+  color: white; /* 按钮文字颜色 */
+  padding: 10px 20px; /* 按钮内边距 */
+  text-decoration: none; /* 去除下划线 */
+  border: none; /* 去除边框 */
+  margin-top: 20px; /* 按钮顶部外边距 */
+}
+
+#about .button:hover {
+  background-color: #B97047; /* 鼠标悬停时按钮背景色 */
+}
+
+/*关于我们部分结束*/
+ 
+  
+  
+  

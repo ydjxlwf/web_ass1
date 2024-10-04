@@ -1,0 +1,208 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="A Dog's Intelligence" content="pet,dog">
+    <title>A Dog's Intelligence - index</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="daohang.css">
+    <script src="index.js"></script>
+    <script src="denglu-script.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>A Dog's Intelligence</h1>
+        </div>
+        <div class="header-right" style="display: flex; align-items: center;">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="login-profile">
+                <img src="touxiang.png" alt="Profile Picture" class="profile-pic">
+                <div id="login-btn">
+                    <!-- 初始状态，链接到登录页面 -->
+                    <a href="denglu.html">Login</a>
+                </div>
+            </div>
+            <script src="denglu-script.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    checkLoginStatus();
+                });
+            </script>
+        </div>
+
+    </header>
+    
+    <section id ="daohanglan">
+        <div class="daohang">
+            <nav>
+                <ul>
+                    <li><a href=#services>service</a></li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="yuyue.html">Booking</a></li>
+                </ul>
+            </nav>
+        </div>
+        </section>
+
+
+     <!-- 轮播图容器 -->
+    <div class="slideshow">
+        <ul class="mySlides">
+            <li class="sideItem fade">
+                <a href="javascript:;">
+                    <img src="gundong3.jpg" alt="pictures about dogs">
+                </a>
+            </li>
+            <li class="sideItem fade">
+                <a href="javascript:;">
+                    <img src="gundong2.jpg"alt="pictures about dogs">
+                </a>
+            </li>
+            <li class="sideItem fade">
+                <a href="javascript:;">
+                    <img src="gundong1.jpg"alt="pictures about dogs">
+                </a>
+            </li>
+            
+        </ul>
+        <div class="prev">❮</div>
+        <div class="next">❯</div>
+        <nav class="navHover"></nav>
+            <ul>
+                <li class="dot" onclick="currentSlide(1)"></li>
+                <li class="dot" onclick="currentSlide(2)"></li>
+                <li class="dot" onclick="currentSlide(3)"></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <section id="hello">
+        <h1>Welcome to Our Puppy Paradise Pet Center !</h1>
+        <p>At Puppy Paradise Pet Center, we provide custom and delivery unparalleled personalized care tailored to each dog's unique breed, age, and personality. Our mission is to ensure that every pet feels pampered, loved, and well attended to in the most professional and nurturing environment.</p>
+    </section>
+
+    <table id="services">
+        <tr>
+            <td colspan="2" class="service-border">
+            <h1>OUR SERVICE</h1>
+          </td>
+        </tr>
+        <tr>
+          <td class="service-item">
+            <h3><a href="doggrooming.html">DOG GROOMING</a></h3>
+            <p>Indulge your furry friend in a luxurious grooming experience. Our groomers use gentle techniques and high-quality products, leaving your dog looking and feeling refreshed, with a personalized cut that complements their personality.</p>
+          </td>
+          <td class="service-img">
+            <img src="grooming2.jpg" alt="A picture of dog grooming">
+          </td>
+        </tr>
+        <tr>
+            <td class="service-img">
+                <img src="training2.jpg" alt="A picture of dog training">
+            </td>
+          <td class="service-item">
+            <h3><a href="dogtraining.html">DOG TRAINING</a></h3>
+            <p>Our trainers employ science-based methods to teach obedience, socialization, and even specialized tricks. We work closely with owners to achieve a well-mannered and confident pet, enhancing the bond between you and your dog.</p>
+          </td>
+        </tr>
+        <tr>
+            <td class="service-item">
+              <h3><a href="dogdaycare.html">DOG DAYCARE</a></h3>
+              <p>Keep your pup entertained and engaged during the day with our stimulating daycare services. Our spacious, supervised play areas encourage healthy exercise and social interaction, ensuring your dog returns index happy and tired.</p>
+            </td>
+            <td class="service-img">
+              <img src="training3.jpg" alt="A picture of dog daycare">
+            </td>
+          </tr>
+          <tr>
+              <td class="service-img">
+                  <img src="boarding3.jpg" alt="A picture of dog boarding">
+              </td>
+            <td class="service-item">
+              <h3><a href="dogboarding.html">Vacation Boarding Services</a></h3>
+              <p>Going on vacation? Leave your worries behind with our vacation boarding services. Your dog will enjoy a comfortable stay in a safe and loving environment, with personalized attention and care, just as if they were at home.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="service-border">
+                <button type="button" class="submit-button" onclick="window.location.href='yuyue.html'">Make an appointment</button>
+            </td>
+        </tr>
+        
+    </table>
+
+    <div id="connectheader">
+        <img src="ui4.jpg" alt="A guide icon" class="ui4">
+        <h2>Connect with Us， <br>
+            Love <span class="your-pet">Your Pet</span> <span class="closer">Closer</span></h2>
+    </div>    
+    
+    <section id="contact">
+     <div class="contact-info">
+      <div id="map">
+        <img id="mapImage" src="map.png" alt="Map of our location" class="map-image">
+      </div>
+      <div class="info">
+        <div class="info-item">
+          <img src="ui1.jpg" alt="Address Icon" class="info-icon">
+          <div>
+            <h3>Our Address</h3>
+            <p>151 Dairy Flat Highway Albany Auckland 0632 New Zealand</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="ui2.jpg" alt="Phone Icon" class="info-icon">
+          <div>
+            <h3>Contact Number</h3>
+            <p>+64 21032563</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="ui3.jpg" alt="Email Icon" class="info-icon">
+          <div>
+            <h3>Email Address</h3>
+            <p>jiayouxiang@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <script src="index.js"></script>
+
+    <section id="about">
+        <p>Step into our world and discover our professionalism and passion in the <strong>About Us</strong> section. <br>Craving a bespoke service experience? Make an appointment now and let us carefully listen to your story, crafting a personalized plan just for you. Embark on an extraordinary journey with us!</p>
+        <a href="about.html" class="button">About us</a>
+    </section>
+</body>
+
+<footer>
+  <div class="footer-left">
+  
+    <h3>Site Map</h3>
+    <ul>
+    <li><a href="index.html">index</a></li>
+    <li>
+        <ul>
+            <li><a href="doggrooming.html">doggrooming</a></li>
+            <li><a href="dogboarding.html">dogboarding</a></li>
+            <li><a href="dogdaycare.html">dogdaycare</a></li>
+            <li><a href="dogtraining.html">dogtraining</a></li>
+        </ul></li>
+    <li><a href="about.html">about us</a></li>
+    <li><a href="yuyue.html">Booking</a></li>
+  </ul>
+  </div>
+  <div class="separator"></div> <!-- 分隔线 -->
+  <div class="footer-right">
+        <p>&copy;A Dog's Intelligence · 20241003 · 2248893785@qq.com</p>
+      </div>
+</footer>
+</html>

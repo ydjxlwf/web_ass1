@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="About A Dog's Intelligence" content="pet,dog">
+    <title>A Dog's Intelligence - About us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="daohang.css">
+    <script src="about.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="header-left">
+            <h1>A Dog's Intelligence</h1>
+        </div>
+        <div class="header-right" style="display: flex; align-items: center;">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="login-profile">
+                <img src="touxiang.png" alt="Profile Picture" class="profile-pic">
+                <div id="login-btn">
+                    <!-- 初始状态，链接到登录页面 -->
+                    <a href="denglu.html">登录/注册</a>
+                </div>
+            </div>
+            <script src="denglu-script.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    checkLoginStatus();
+                });
+            </script>
+        </div>
+    </header>
+    <section id ="daohanglan">
+        <div class="daohang">
+            <nav>
+                <ul>
+                    <li><a href="index.html">service</a></li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="yuyue.html">Booking</a></li>   
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section id="why-us">
+        <h2>Why<br>choose us?</h2>
+        <div class="row">
+            <div class="reason" id="reason1">
+                <h3>Personalized Services:</h3>
+                <p>We understand that no two dogs are alike, hence we offer customized services that cater specifically to their individual needs. Whether it's a playful puppy or a seasoned senior, our experts design services that foster their well-being and happiness.</p>
+            </div>     
+            <div class="image">
+                <img src="about1.jpg" alt="Personalized Services" id="select1">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="image">
+                <img src="about2.jpg" alt="Professional Expertise" id="select2">
+            </div>
+            <div class="reason" id="reason2">
+                <h3>Professional Expertise:</h3>
+                <p>Our team comprises of seasoned professionals with extensive experience in pet care and training. They are equipped with the knowledge and skills to handle even the most challenging behaviors, ensuring that your beloved companion receives the best possible care.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="reason" id="reason3">
+                <h3>One-Stop Solution:</h3>
+                <p>Puppy Paradise Pet Center is your one-stop destination for all your pet dog's daily needs. From pampering grooming sessions to expert training programs, fun-filled daycare adventures, to worry-free vacation boarding services, we've got you covered.</p>
+            </div>
+            <div class="image">
+                <img src="about3.jpg" alt="One-Stop Solution" id="select3">
+            </div>
+        </div>
+    </section>
+
+    <section id="pingjiamen">
+        <h2>Some customer reviews</h2>
+        <div class="columns">
+            <div class="column" id="column1">
+                <div class="ping">
+                    <img src="pingjia1.jpg" alt="yuki holds her dog" id="ping1">
+                </div>
+                <div class="pingjia">
+                    <p>"My Dog Lucky has had grooming and training services at A Dog's Intelligence and the results have been phenomenal. <br>
+                    <br>
+                        Lucky became more confident and obedient, and also looked more handsome. Many thanks to the team at A Dog's Intelligence, they are really caring and professional! Highly recommend!"</p>
+                    <span>- Yuki</span>
+                </div>
+            </div>
+
+            <div class="column" id="column2">
+                <div class="ping">
+                    <img src="pingjia2.jpg" alt="Vennie high-fives the dog" id="ping2">
+                </div>
+                <div class="pingjia">
+                    <p> "My Dog Buddy is in daycare at A Dog's Intelligence and every time I come back, Buddy is so happy. <br>
+                        <br>
+                        The staff regularly updated photos and videos of Buddy's life at the daycare center, which made me feel very reassured. A Dog's Intelligence's service is fantastic and I would stick with them."</p>
+                    <span>- Vennie</span>
+                    
+                </div>
+            </div>
+
+            <div class="column" id="column3">
+                <div class="ping">
+                    <img src="pingjia3.jpg" alt="Someone leans on his dog" id="ping3">
+                </div>
+                <div class="pingjia">
+                    <p>"I took my Dog Rex to A Dog's Intelligence for vacation boarding and it went really well. Rex was well cared for during his time in foster care and the staff gave me regular feedback on how Rex was doing. <br>
+                        <br>
+                        I am so grateful to the team at A Dog's Intelligence who made it possible for Rex to enjoy the warmth of his index during his holiday."</p>
+                    <span>- Anonymous user</span>
+                </div>
+            </div>
+        </div>    
+    </section>
+    
+
+</body>
+<footer>
+    <div class="footer-left">
+    
+      <h3>Site Map</h3>
+      <ul>
+      <li><a href="index.html">index</a></li>
+      <li>
+          <ul>
+              <li><a href="doggrooming.html">doggrooming</a></li>
+              <li><a href="dogboarding.html">dogboarding</a></li>
+              <li><a href="dogdaycare.html">dogdaycare</a></li>
+              <li><a href="dogtraining.html">dogtraining</a></li>
+          </ul></li>
+      <li><a href="about.html">about us</a></li>
+      <li><a href="yuyue.html">Booking</a></li>
+    </ul>
+    </div>
+    <div class="separator"></div> <!-- 分隔线 -->
+    <div class="footer-right">
+          <p>&copy;A Dog's Intelligence · 20241003 · 2248893785@qq.com</p>
+        </div>
+  </footer>
+</html>

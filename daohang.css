@@ -1,0 +1,211 @@
+:root {
+  font-family: 'Arial'; /* Arial是首选字体，如果不可用，则使用任何无衬线字体 */
+  font-size: 16px; /* 设置全局字体大小 */
+  line-height: 1.5; /* 设置全局行高 */
+}
+
+/*全局样式*/
+.header-left {
+  font-family: Arial;
+  line-height: 1.6; /* 行高 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 桌面电脑的样式 */
+@media screen and (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+}
+
+/* 平板电脑的样式 */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 85%;
+  }
+}
+
+/* 智能手机的样式 */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+a {
+  color: #FFFFFF; 
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #A98274; /* 鼠标悬停时色 */
+  text-decoration: underline;
+}
+
+/* 头部/搜索栏登录样式 */
+header {
+    background-color: #3C2104; /* 棕色背景 */
+    color: white; /* 白色文字 */
+    padding: 10px; /* 内边距 */
+    display: flex; /* 弹性布局 */
+    justify-content: space-between; /* 左右对齐，中间自动分配空间 */
+    align-items: center; /* 垂直居中对齐 */
+  }
+  
+  .header-left {
+    flex-grow: 1; /* 占据左侧空间 */
+  }
+  .header-right {
+    display: flex; /* 弹性布局 */
+    align-items: center; /* 垂直居中对齐 */
+  }
+  
+  .login-profile {
+    margin-left: 10px; /* 左侧外边距 */
+  }
+  .search-box {
+    margin-right: 10px; /* 右侧外边距 */
+  }
+  .search-box input {
+    padding: 10px; /* 内边距 */
+  }
+  
+  .profile-pic {
+    width: 40px; /* 图片宽度 */
+    height: 40px; /* 图片高度 */
+    border-radius: 50%; /* 圆形边框 */
+    object-fit: cover; /* 覆盖图片内容，保持圆形 */
+    margin-right: 5px; /* 右侧外边距 */
+  }
+  
+  #denglu a {
+    color: #FFFFFF;/* 登录/注册文字颜色 */
+    text-decoration: none; /* 移除下划线 */
+  }
+  
+  /* 搜索框和登录链接的响应式布局 */
+  @media screen and (max-width: 600px) {
+    header {
+        flex-direction: column; /* 水平变为垂直 */}
+    .header-right {
+        margin-top: 10px; /* 增加搜索框与登录按钮之间的距离 */
+        justify-content: flex-start; /* 左对齐 */}
+    .search-box {
+        margin-right: 0; /* 移除搜索框的右边距 */}
+  }
+  /* 头部/搜索栏登录样式结束 */
+
+   /* 导航栏样式 */
+#daohanglan {
+  position: relative;
+  z-index: 10; /* 确保导航在其他内容之上 */
+  background-color: #A98274; /* 浅灰色背景 */
+  text-align: center; /* 文本居中对齐 */
+  padding:5px; /* 减少了内边距，使导航栏更窄 */
+  margin-top: 0;
+  font-size: 16px;
+}
+
+/* 导航栏样式 */
+nav ul {
+  list-style-type: none; /* 移除列表项标记 */
+  padding: 0;
+  display: flex; /* 弹性布局以水平排列 */
+  justify-content: space-around; /* 项目均匀分布 */
+}
+
+nav li a {
+  text-decoration: none; /* 移除下划线 */
+  color: #333333; /* 文字颜色 */
+  padding: 10px; /* 减少了上下内边距，使导航项更窄 */
+  display: block; /* 将链接作为块级元素 */
+}
+
+#daohanglan .daohang nav ul li a:hover {
+  color: #FFFFFF; /* 鼠标悬停时字体颜色变为白色 */
+}
+/* 导航栏样式结束 */
+
+/*页脚样式*/
+/* Footer 样式 */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 垂直居中所有子元素 */
+  background-color: #3C2104;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+/* 左半部分样式 */
+footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 使左半部分的文本居中 */
+  justify-content: center; /* 垂直居中左半部分 */
+  height: 100%; /* 确保左半部分填满整个页脚高度 */
+  text-align: center; /* 文本居中 */
+  flex: 1; /* 允许左半部分扩展以填充可用空间 */
+}
+
+footer .footer-left h3 {
+  margin-bottom: 10px;
+  color: #A98274;
+}
+
+footer .footer-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-left ul li {
+  margin-bottom: 5px;
+}
+
+footer .footer-left ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .footer-left ul li a:hover,
+footer .footer-left ul li a:focus {
+  color: #A98274;
+}
+
+/* 分隔线样式 */
+footer .separator {
+  border-left: 1px solid #707070; /* 分隔线样式 */
+  height: 50px; /* 分隔线高度 */
+  margin: 0 20px; /* 分隔线与左右内容的间距 */
+}
+
+/* 右半部分样式 */
+footer .footer-right {
+  text-align: right; /* 文本靠右 */
+}
+
+/* 媒体查询，当屏幕宽度小于600px时改变布局 */
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    align-items: center; /* 垂直居中所有子元素 */
+  }
+  footer .footer-left,
+  footer .footer-right {
+    align-items: center;
+    justify-content: center;
+    height: auto; /* 在小屏幕上不需要固定高度 */
+    width: 100%; /* 使左半部分和右半部分占满整个宽度 */
+  }
+  footer .separator {
+    border-left: none; /* 在小屏幕上移除分隔线 */
+    border-top: 1px solid #707070; /* 添加顶部分隔线 */
+    height: 0; /* 分隔线高度设置为0 */
+    margin: 20px 0; /* 分隔线与上下内容的间距 */
+    width: 100%; /* 分隔线宽度设置为100% */
+  }
+}
+
+/*页脚样式结束*/

@@ -1,0 +1,168 @@
+:root {
+    font-family: 'Arial'; /* Arial是首选字体，如果不可用，则使用任何无衬线字体 */
+    font-size: 16px; /* 设置全局字体大小 */
+    line-height: 1.5; /* 设置全局行高 */
+  }
+
+a:hover {
+    color: #A98274; /* 鼠标悬停时色 */
+    text-decoration: underline;
+  }
+
+  /* 桌面电脑的样式 */
+@media screen and (min-width: 992px) {
+    .container {
+      width: 70%;
+    }
+  }
+  
+  /* 平板电脑的样式 */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 85%;
+    }
+  }
+  
+  /* 智能手机的样式 */
+  @media screen and (max-width: 767px) {
+    .container {
+      width: 95%;
+    }
+  }
+  
+/*选择我们格式*/
+#why-us{
+    margin: 3vh;
+    background-color: #E5E5E5;
+    border-radius: 20px;/*圆角*/
+    display: flex;
+    flex-direction: column; /* 布局方向为垂直 */
+}
+
+#why-us h2{
+    font-size: clamp(8px,3vw, 25px);
+    width: 18vw;
+    letter-spacing: 0.5vw;  /* 增加字符间距 */
+    color: #FFFFFF;
+    background-color:#3C2104;
+    padding: 1vw;
+    padding-left: 3vw;
+}
+
+.row {
+    display: flex;
+  align-items: center; /* 垂直居中对齐 */
+}
+
+/*文字格式*/
+.reason{
+    color: #A98274;
+    flex: 1; /* 允许.reason-card元素伸缩以占据可用空间 */
+    
+}
+#reason1,#reason3{
+    padding-left: 7vw;
+    padding-right:3vw;
+}
+
+#reason2{
+    padding-right:6vw;
+    padding-left: 3vw;
+}
+.reason h3{
+    font-size: clamp(20px, 2vw, 120px);
+}
+#reason2 h3{
+    text-align: right;
+    padding-right: 1.5vw;
+}
+
+.reason p{
+    font-size: 16px;
+}
+
+/*图片格式*/
+#select1{
+    padding-right:6vw;
+}  
+#select2{
+    padding-left: 6vw;
+}
+#select3{
+    padding-right:6vw;
+    margin-bottom: 2vw;
+}
+.image {
+    flex: 0 0 3%; /* 图片区域不伸缩，基础宽度为30% */ 
+}
+
+.image img {
+  float: right;
+  width: 20vw; /* 使图片宽度占满其容器 */
+  height: 35vh; /* 高度自动，保持图片的宽高比 */
+  object-fit: cover; /* 如果图片太大，将被修剪以覆盖整个容器 */
+  border-radius: 5px;/*圆角*/
+}
+#select1,#select3{
+    float: left;
+}
+
+/*选择部分结束*/
+
+/* 评价部分样式 */
+#pingjiamen {
+    margin: 3vh;
+    vertical-align: middle; /* 垂直居中 */
+    text-align: center; /* 文字居中 */
+    color: #FFFFFF;
+}
+
+#pingjiamen h2 {
+    font-size: clamp(15px, 1.5vw, 80px);
+    width: 45vw;
+    height: 5vh;
+    letter-spacing: 0.5vw;  /* 增加字符间距 */
+    background-color: #3C2104;
+    padding: 10px;
+    margin: 0 auto; /*使标题居中 */
+    margin-top:10vw ;
+    margin-bottom: 4vw;
+    border-radius: 5px;/*圆角*/
+}
+
+.columns {   
+    display: flex; /* 使用Flexbox布局 */
+    width: 100%; /* 确保列占满整个容器宽度 */
+    text-align: left; /* 评价内容左对齐 */
+    padding: 10px;
+}
+
+.column {
+    flex: 1; /* 使每个列都可以伸缩，并平均分配空间 */    
+    margin: 0 13px; /* 在列之间添加一些间隔 */
+    text-align: left; /* 评价内容左对齐 */
+    padding: 10px;
+}
+
+#column1{
+    background-color: #A98274;
+}
+#column2{
+    background-color: #3C2104;
+}
+#column3{
+    background-color: #A98274;
+}
+/* 文字格式 */
+.pingjia {
+    font-size: 16px;
+    padding: 1dvh;
+}
+
+/* 图片格式 */
+.ping img {
+    width: 100%; /* 使图片宽度适应其容器 */
+    height: auto; /* 保持图片的纵横比 */
+}
+/* 评价部分结束 */
+

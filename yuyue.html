@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="booking" content="service booking">
+    <title>A Dog's Intelligence - Booking</title>
+    <link rel="stylesheet" href="yuyue-style.css">
+    <link rel="stylesheet" href="daohang.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>A Dog's Intelligence</h1>
+        </div>
+        <div class="header-right" style="display: flex; align-items: center;">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="login-profile">
+                <img src="touxiang.png" alt="Profile Picture" class="profile-pic">
+                <div id="login-btn">
+                    <!-- 初始状态，链接到登录页面 -->
+                    <a href="denglu.html">登录/注册</a>
+                </div>
+            </div>
+            <script src="denglu-script.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    checkLoginStatus();
+                });
+            </script>
+        </div>
+    </header>
+
+    <section id ="daohanglan">
+        <div class="daohang">
+            <nav>
+                <ul>
+                    <li><a href="index.html">service</a></li>
+                    <li><a href="about.html">about us</a></li>
+                    <li><a href="yuyue.html">Booking</a></li>
+                </ul>
+            </nav>
+        </div>
+        </section>
+
+    <div class="appointment-container">
+        <div class="appointment-header">
+            <h1>Dog reservation service</h1>
+        </header>
+        <main class="appointment-main">
+            <section class="appointment-form" id="appointmentFormSection">
+                <h2>Start a custom service for your dog</h2>
+                <form id="appointmentForm" onsubmit="submitAppointment(event)">
+                    <div class="form-group">
+                        <label for="petName">Dog name:</label>
+                        <input type="text" id="petName" name="petName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petsex">Dog sex:</label>
+                        <select id="petsex" name="petsex" required>
+                            <option value="male">good boy</option>
+                            <option value="female">good girl</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="petkind">Dog breed:</label>
+                        <input type="text" id="petkind" name="petkind" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceName">Select service:</label>
+                        <select id="serviceName" name="serviceName" required>
+                            <option value="grooming">Dog grooming</option>
+                            <option value="training">Dog training</option>
+                            <option value="daycare">Dog daycare</option>
+                            <option value="boarding">Dog boarding</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentDate">Appointment Date</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Appointment Time</label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" required>
+                    </div>
+                    <button type="submit" class="submit-button">Make an appointment</button>
+                </form>
+            </section>
+            <section class="appointment-success" id="appointmentSuccessSection" style="display: none;">
+                <h2>Reservation is successful!</h2>
+                <p id="successMessage"></p>
+            </section>
+        </main>
+    </div>
+    
+
+        <div class="backtoindex">
+            <a href="index.html" class="backtoindex-link">Back to index page</a>
+        </div>
+
+    <script src="yuyue-script.js"></script>
+</div>
+</body>
+
+<footer>
+    <div class="footer-left">
+    
+      <h3>Site Map</h3>
+      <ul>
+      <li><a href="index.html">index</a></li>
+      <li>
+          <ul>
+              <li><a href="doggrooming.html">doggrooming</a></li>
+              <li><a href="dogboarding.html">dogboarding</a></li>
+              <li><a href="dogdaycare.html">dogdaycare</a></li>
+              <li><a href="dogtraining.html">dogtraining</a></li>
+          </ul></li>
+      <li><a href="about.html">about us</a></li>
+      <li><a href="yuyue.html">Booking</a></li>
+    </ul>
+    </div>
+    <div class="separator"></div> <!-- 分隔线 -->
+    <div class="footer-right">
+          <p>&copy;A Dog's Intelligence · 20241003 · 2248893785@qq.com</p>
+        </div>
+  </footer>
+</html>

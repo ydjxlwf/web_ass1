@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="login A Dog's Intelligence" content="login,signup">
+<title>A Dog's Intelligence - login/sign up</title>
+<link rel="stylesheet" href="denglu-style.css">
+<script src="denglu-script.js" defer></script>
+<style>
+    html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1; /* 确保内容区域填满剩余空间 */
+            padding-bottom: 50px; /* 防止内容被footer遮挡 */
+        }
+        footer {
+            color: white;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background: #3C2104;
+            padding: 10px;
+            z-index: 1000; /* 确保footer在顶部 */
+        }
+    body {
+        /* 设置背景图片 */
+        background-image: url('background.jpg');
+
+        /* 背景图片重复方式 */
+        background-repeat: no-repeat;
+
+        /* 背景图片尺寸 */
+        background-size: cover; /* 或者可以使用 contain, 100% 100%, 等等 */
+
+        /* 背景图片位置 */
+        background-position: center center;
+
+        /* 背景图片固定还是滚动 */
+        background-attachment: fixed; /* 或者 scroll */
+    }
+</style>
+</head>
+<body>
+<div class ="content">
+    <!-- 登录表单 -->
+<div id="login-form" class="form-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required> <!-- 注意这里的 id -->
+    <input type="password" id="password" placeholder="Password" required> <!-- 注意这里的 id -->
+    <button id="continue-btn">Continue</button> <!-- 移除了 onclick 属性 -->
+    <p>No account? <a href="#" onclick="toggleForm('signup')">Sign up here</a></p>
+</div>
+
+<!-- 注册表单 -->
+<div id="signup-form" class="form-container hidden">
+    <h2>Sign Up</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="new-username" placeholder="Username" required>
+    <input type="password" id="new-password" placeholder="Password" required>
+    <button id="signup-btn" onclick="handleSignup()">Sign Up</button>
+    <p>Already have an account? <a href="#" onclick="toggleForm('login')">Log in here</a></p>
+</div>
+
+<!-- 登录信息显示 -->
+<div id="login-message"></div>
+
+<!-- 添加一个具有 id="continue-btn" 的按钮 -->
+<div class="back-button">
+    <button id="back-btn">Continue to use tourist status</button>
+</div>
+</div>
+</body>
+
+<footer>
+    <div class="footer-right">
+          <p>&copy;A Dog's Intelligence · 20241003 · 2248893785@qq.com</p>
+        </div>
+  </footer>
+
+</html>
